@@ -25,5 +25,8 @@
     "@babel/runtime": "^7.17.2",
     "dotenv": "^16.0.0",
     "mongoose": "^6.3.0"
+  },
+  "engines": {
+    "node": "v14.x"
   }
 }
