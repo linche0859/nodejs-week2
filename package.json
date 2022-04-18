@@ -1,0 +1,28 @@
+{
+  "name": "nodejs-week2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js --exec babel-node",
+    "build": "babel src -d dist/src && babel index.js -d dist",
+    "start": "yarn build && node dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/node": "^7.16.8",
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.5",
+    "@babel/plugin-transform-runtime": "^7.17.0",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/runtime": "^7.17.2",
+    "dotenv": "^16.0.0",
+    "mongoose": "^6.3.0"
+  }
+}
