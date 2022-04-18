@@ -67,13 +67,13 @@ const requestListener = async (request, response) => {
 		// 刪除全部貼文
 	case method === httpMethod.DELETE && url === baseUrl:
 		await deletePosts();
-		responseText = getHttpResponseText({});
+		responseText = getHttpResponseText();
 		break;
 		// 刪除指定的代辦事項
 	case method === httpMethod.DELETE && url.startsWith(`${baseUrl}/`):
 		try {
 			await deletePost(getUrlPostId(url));
-			responseText = getHttpResponseText({});
+			responseText = getHttpResponseText();
 		} catch (message) {
 			statusCode = 400;
 			responseText = getHttpResponseText({

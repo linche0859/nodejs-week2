@@ -4,7 +4,7 @@
  * @param {string|array} data 回傳的內容
  * @returns {string} JSON 格式內容
  */
-export const getHttpResponseText = ({ success = true, data }) => {
+export const getHttpResponseText = ({ success = true, data } = {}) => {
 	const result = { status: success ? 'success' : 'error' };
 	if(data) result[success ? 'data' : 'message'] = data;
 	return JSON.stringify(result);
