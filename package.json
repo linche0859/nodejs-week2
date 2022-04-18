@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon index.js --exec babel-node",
-    "build": "babel src -d dist/src && babel index.js -d dist",
+    "build": "babel integration -d dist/integration && babel models -d dist/models && babel index.js -d dist",
     "start": "yarn build && node dist/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
