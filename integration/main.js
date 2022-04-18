@@ -13,6 +13,7 @@ export const getPosts = async () => await Post.find().sort({ createdAt: -1 });
 /**
  * 新增貼文
  * @param {string} payload 傳入參數
+ * @returns {object} 新增的貼文資訊
  */
 export const postOnePost = async (payload) => {
 	try {
@@ -28,6 +29,7 @@ export const postOnePost = async (payload) => {
  * 編輯特定的貼文
  * @param {string} postId 貼文編號
  * @param {string} payload 傳入參數
+ * @returns {object} 編輯的貼文資訊
  */
 export const patchPost = async ({ postId, payload }) => {
 	try {
